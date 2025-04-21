@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Wonderful Prerna</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif; /* A classic, readable font */
+            background: linear-gradient(135deg, #f0f8ff, #fff); /* Very light, airy background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* 3D Card Container */
+        .letter-container {
+            background-color: rgba(255, 255, 255, 0.97);
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+            padding: 45px;
+            width: 88%;
+            max-width: 720px;
+            text-align: center;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s ease, box-shadow 0.4s ease;
+            animation: fadeIn 1.1s ease-out forwards;
+        }
+
+        /* Card Hover Animation */
+        .letter-container:hover {
+            transform: rotateY(20deg) rotateX(10deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: #c71585; /* A beautiful magenta */
+            margin-bottom: 30px;
+            font-size: 2.8em;
+            letter-spacing: 1.2px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.06);
+        }
+
+        p {
+            color: #333;
+            line-height: 1.75;
+            margin-bottom: 28px;
+            font-size: 1.1em;
+        }
+
+        .signature {
+            font-family: 'Cursive', cursive; /* A simple cursive font */
+            font-size: 1.6em;
+            color: #dc143c; /* A warm crimson */
+        }
+
+        /* Lighting effects */
+        .light {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.5;
+            filter: blur(18px);
+            animation: softPulse 2.5s infinite alternate;
+        }
+
+        .light-1 {
+            top: 12%;
+            left: 18%;
+            width: 55px;
+            height: 55px;
+            background-color: #98fb98; /* Pale green */
+            animation-delay: 0.3s;
+        }
+
+        .light-2 {
+            bottom: 18%;
+            right: 22%;
+            width: 75px;
+            height: 75px;
+            background-color: #ffa07a; /* Light salmon */
+            animation-delay: 0.6s;
+        }
+
+        .light-3 {
+            top: 45%;
+            right: 8%;
+            width: 65px;
+            height: 65px;
+            background-color: #87cefa; /* Light sky blue */
+            animation-delay: 0.9s;
+        }
+
+        @keyframes softPulse {
+            from { transform: scale(0.95); }
+            to { transform: scale(1.05); }
+        }
+
+        /* Lightning Flash Effect */
+        @keyframes lightningFlash {
+            0%, 100% { opacity: 0.1; }
+            50% { opacity: 0.8; }
+        }
+
+        .lightning {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, #ffffff, transparent);
+            z-index: 1;
+            animation: lightningFlash 2s infinite;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="lightning"></div> <!-- Lightning flash effect -->
+    <div class="letter-container">
+        <h2>My Wonderful Prerna,</h2>
+        <p>Prerna, simply thinking of you fills my heart with a quiet joy. You bring a sense of peace and happiness into my life that I deeply cherish. Every moment we share, whether big or small, becomes a treasured memory I hold close.</p>
+        <p>Your kindness shines through in everything you do, and your spirit is truly beautiful. You inspire me to see the world with more openness and understanding. Having you in my life is a gift I appreciate more than words can express.</p>
+        <p>With all my love,</p>
+        <p class="signature">Pri</p>
+        <div class="light light-1"></div>
+        <div class="light light-2"></div>
+        <div class="light light-3"></div>
+    </div>
+</body>
+</html>
